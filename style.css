@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#wrapper {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.black {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+    top: 0;
+    color: white;
+    z-index: 10;
+}
+
+.container {
+    width: 85%;
+    height: 80vh;
+    position: relative;
+    /* margin: auto; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 20;
+    /* background: black;  */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hamburger {
+    width: 50px;
+    cursor: pointer;
+}
+
+#hamburger div {
+    width: 100%;
+    height: 1px;
+    background: white;
+}
+
+.roboto {
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FFFFFF80;
+    font-size: 11px;
+    /* font-weight: 600; */
+}
+
+.roboto div {
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.right {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 50%;
+    justify-content: flex-end;
+    transform: translateY(-50%);
+}
+
+.dash {
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+
+.sideText {
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 2px;
+    transition: 0.3s linear;
+}
+
+.sideText:hover {
+    letter-spacing: 5px;
+}
+
+.center {
+    width: 50%;
+    top: 10vh;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.842);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.logoImg {
+    width: 35.76vw;
+    height: 51vh;
+}
+
+.centerText {
+    left: auto;
+    font-size: 12px;
+    letter-spacing: 3em;
+    transition: 1s ease;
+    position: relative;
+    left: 20px;
+    bottom: 35px;
+}
+
+.moveDash {
+    position: relative;
+    top: -25px;
+    margin: auto;
+    height: 100px;
+    width: 1px;
+    background: #b2bfb6;
+    overflow-y: hidden;
+}
+
+.moveDash:before {
+    content: '';
+    display: block;
+    background-color: white;
+    height: 100px;
+    transform: translateY(-100px);
+    width: 100%;
+    animation: toFull 2s linear infinite;
+}
+
+@keyframes toFull {
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+.contactDiv {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    z-index: 20;
+    display: inline-block;
+}
+
+.dropdown {
+    background: white;
+    z-index: 10;
+    color: #18191b;
+    display: none;
+    font-size: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    width: 275px;
+    bottom: 40px;
+    right: 0;
+}
+
+.dropdown img {
+    margin-right: 10px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #18191b;
+    letter-spacing: 2px;
+}
+
+.options:hover span {
+    border-bottom: 1px solid #18191b;
+    /* animation: moveLine 2s ease; */
+}
+
+/* @keyframes moveLine {
+    100%{
+        border-bottom: 1px solid #18191b;
+    }
+} */
+.contact {
+    width: 40px;
+    background: white;
+    text-align: center;
+    opacity: 0.5;
+    transition: 1s ease;
+}
+
+.contactDiv:hover .dropdown {
+    display: block;
+}
+
+.contactDiv:hover .contact {
+    opacity: 0.9;
+}
+
+.contact img {
+    padding: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.disappear {
+    display: none;
+}
+
+@media (min-width:1001px) and (max-width:1289px) {
+    .centerText {
+        letter-spacing: 2.2em;
+    }
+}
+
+@media (min-width:901px) and (max-width:1000px) {
+    .centerText {
+        letter-spacing: 1.9em;
+    }
+
+    .container {
+        width: 90%;
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .left,
+    .right {
+        display: none
+    }
+
+    #hamburger div {
+        width: 25px;
+    }
+
+    .centerText {
+        letter-spacing: 1.5em;
+        top: 0;
+        left: 0;
+    }
+
+    .moveDash {
+        top: 15vh;
+    }
+
+    .container {
+        width: 90%;
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .logoImg {
+        width: 80.3vw;
+        height: 30.5vh;
+        position: relative;
+        left: -40%;
+    }
+
+    .centerText {
+        letter-spacing: 1em;
+        font-size: 7px;
+    }
+}

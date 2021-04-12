@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">   
+</head>
+
+<body>
+    <div id="wrapper">
+        <video src="https://www.alter-ego.ru/video/CROATIA_main_desc.mp4" muted loop autoplay></video>
+        <div class="black clip-text clip-text_one"></div>
+    </div>
+    <div class="container">
+        <nav>
+            <div id="hamburger">
+                <div></div>
+                <div style="margin-top: 7px;"></div>
+            </div>
+            <div class="roboto">
+                <div class="eng" style="margin-right: 30px;">ENG</div>
+                <div class="ru">RU</div>
+            </div>
+        </nav>
+        <div class="left">
+            <div class="dash" style="margin-right: 20px;"></div>
+            <div class="sideText">MILAN</div>
+        </div>
+        <div class="right">
+            <div class="sideText">MOSCOW</div>
+            <div class="dash" style="margin-left:20px"></div>
+        </div>
+        <div class="center">
+            <!-- <img class="logoImg" src="https://www.alter-ego.ru/img/logo_white.svg" alt=""> -->
+            <img class="logoImg" src="icons&logo/logo_white.svg" alt="">
+            <div class="centerText">PROJECT GROUP</div>
+            <div class="moveDash"></div>
+        </div>
+    </div>
+    <div class="contactDiv">
+        <div class="contact">
+            <img src="icons&logo/iconfinder_phone1_172517.png" alt="" class="disappear">
+            <img src="icons&logo/iconfinder___Message_1904663.png" alt="">
+        </div>
+        <div class="dropdown">
+            <div class="options">
+                <img src="icons&logo/iconfinder_phone1_172517.png" alt=""> 
+                <span>CALL</span>
+            </div>
+            <div class="options">
+                <img src="icons&logo/iconfinder___Message_1904663.png" alt="">
+                <span>CONTACT US VIA WHATSAPP</span>
+            </div>
+            <div class="options">
+                <img src="icons&logo/iconfinder_Email_paper_air_plane_airplane_send_message_6590513.png" alt=""> 
+                <span>CONTACT US VIA TELEGRAM</span>
+            </div>
+            <div class="options">
+                <img src="icons&logo/iconfinder_mail-letter-offer_2931172.png" alt=""> 
+                <span>E-MAIL US</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const contactImgs=document.querySelectorAll(".contact img");
+    function toggleAppearance(){
+        contactImgs[0].classList.toggle("disappear");
+        contactImgs[1].classList.toggle("disappear");
+    }
+    setInterval(toggleAppearance,3000);
+</script>
+</html>
