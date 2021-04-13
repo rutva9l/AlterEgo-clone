@@ -192,6 +192,10 @@ nav {
     letter-spacing: 2px;
 }
 
+.options:hover{
+    background: #ededed;
+}
+
 .options:hover span {
     border-bottom: 1px solid #18191b;
     /* animation: moveLine 2s ease; */
