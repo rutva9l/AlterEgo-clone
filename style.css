@@ -196,16 +196,24 @@ nav {
     background: #ededed;
 }
 
-.options:hover span {
-    border-bottom: 1px solid #18191b;
-    /* animation: moveLine 2s ease; */
+.options span{
+    display: flex;
+    flex-direction: column;
+}
+.options:hover span::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #18191b;
+    position: relative;
+    animation: moveLine .5s linear forwards;
 }
 
-/* @keyframes moveLine {
+@keyframes moveLine {
     100%{
-        border-bottom: 1px solid #18191b;
+        width: 100%;
     }
-} */
+}
 .contact {
     width: 40px;
     background: white;
